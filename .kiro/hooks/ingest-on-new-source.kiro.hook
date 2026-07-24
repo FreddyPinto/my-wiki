@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Ingest on New Source",
+  "description": "Automatically triggers the ingest workflow when a new file is created under raw/. Activates #ingest-workflow and passes the new file's path to the agent for ingestion into the wiki.",
+  "version": "1",
+  "when": {
+    "type": "fileCreated",
+    "patterns": [
+      "raw/**/*"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A new source file has been added at {{filePath}}. Activate #ingest-workflow and ingest this file into the wiki."
+  }
+}
