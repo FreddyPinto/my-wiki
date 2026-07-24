@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Lint the Wiki",
+  "description": "Run a full wiki health check on demand. Covers orphan pages, broken links, stale claims, unflagged contradictions, missing entity/concept pages, index drift, and log hygiene.",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Activate #lint-workflow and run a full wiki health check covering all of the following checks in order:\n1. Orphan pages — wiki pages not linked from wiki/index.md\n2. Broken links — internal links that point to non-existent wiki pages\n3. Stale claims — wiki claims contradicted by a newer source in raw/ (compare source dates)\n4. Unflagged contradictions — claims in one wiki page that contradict claims in another without a > **Contradiction:** callout\n5. Missing pages — entities or concepts mentioned in wiki pages that lack a dedicated page under wiki/entities/ or wiki/concepts/\n6. Index drift — pages that exist on disk under wiki/ but are absent from wiki/index.md, or entries in wiki/index.md that point to non-existent files\n7. Log hygiene — log entries in wiki/log.md that are malformed, out of order, or reference operations with no corresponding wiki page\n\nPresent a consolidated list of all issues found, grouped by check. Do not modify any wiki files until the user gives explicit confirmation."
+  }
+}
