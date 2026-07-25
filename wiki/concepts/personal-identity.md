@@ -4,6 +4,7 @@ related:
   - ../concepts/ship-of-theseus-identity-paradox.md
   - ../concepts/spatiotemporal-continuity.md
   - ../concepts/perdurantism.md
+  - ../concepts/psychological-continuity.md
   - ../sources/theseus-paradox.md
 ---
 
@@ -20,7 +21,7 @@ A human being changes continuously: biologically, the cells of the body are repl
 Personal identity is a direct application of the [Ship of Theseus / Identity Paradox](../concepts/ship-of-theseus-identity-paradox.md). The body is analogous to the ship: material composition changes completely over time, yet identity appears to persist. Competing answers mirror those in the object-identity debate:
 
 - **Bodily continuity** (analogous to [Spatiotemporal Continuity](../concepts/spatiotemporal-continuity.md)): identity is grounded in an unbroken physical and psychological causal chain.
-- **Psychological continuity**: identity is grounded in continuity of memories, personality, and mental states — the "pattern" rather than the matter.
+- **Psychological continuity** (see [Psychological Continuity](../concepts/psychological-continuity.md)): identity is grounded in continuity of memories, personality, and mental states — the "pattern" rather than the matter.
 - **Perdurantist account** (see [Perdurantism](../concepts/perdurantism.md)): a person is the four-dimensional whole of all their temporal stages; there is no single "self" at a moment but rather a temporally extended entity.
 
 ## Broader Significance
@@ -29,4 +30,4 @@ The personal identity problem has practical implications in ethics (moral respon
 
 ## Sources
 
-- [Theseus's Paradox.md](../../raw/Theseus's Paradox.md)
+- [Theseus's Paradox.md](../../raw/Theseus's%20Paradox.md)
