@@ -28,4 +28,4 @@ In the context of the [Ship of Theseus / Identity Paradox](../concepts/ship-of-t
 
 ## Sources
 
-- [Theseus's Paradox.md](../../raw/Theseus's Paradox.md)
+- [Theseus's Paradox.md](../../raw/Theseus's%20Paradox.md)

@@ -13,4 +13,4 @@ Hobbes added a crucial second stage to the [Ship of Theseus / Identity Paradox](
 
 ## Sources
 
-- [Theseus's Paradox.md](../../raw/Theseus's Paradox.md)
+- [Theseus's Paradox.md](../../raw/Theseus's%20Paradox.md)

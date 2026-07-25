@@ -13,4 +13,4 @@ Plutarch described how the Athenians preserved the ship of [Theseus](../entities
 
 ## Sources
 
-- [Theseus's Paradox.md](../../raw/Theseus's Paradox.md)
+- [Theseus's Paradox.md](../../raw/Theseus's%20Paradox.md)

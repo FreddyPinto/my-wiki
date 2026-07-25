@@ -13,4 +13,4 @@ According to [Plutarch](../entities/plutarch.md), the Athenians preserved Theseu
 
 ## Sources
 
-- [Theseus's Paradox.md](../../raw/Theseus's Paradox.md)
+- [Theseus's Paradox.md](../../raw/Theseus's%20Paradox.md)

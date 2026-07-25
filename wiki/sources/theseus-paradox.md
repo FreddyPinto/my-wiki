@@ -6,7 +6,7 @@ date: 2026-07-24
 
 # Theseus's Paradox
 
-[Theseus's Paradox.md](../../raw/Theseus's Paradox.md)
+[Theseus's Paradox.md](../../raw/Theseus's%20Paradox.md)
 
 ## Summary
 
