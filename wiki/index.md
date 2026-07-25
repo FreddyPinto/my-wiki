@@ -16,7 +16,9 @@ during ingest and query operations. Pages are organized by type.
 
 ## Concepts
 
+- [Constitutionalism](concepts/constitutionalism.md)
 - [Perdurantism](concepts/perdurantism.md)
 - [Personal Identity](concepts/personal-identity.md)
+- [Psychological Continuity](concepts/psychological-continuity.md)
 - [Ship of Theseus / Identity Paradox](concepts/ship-of-theseus-identity-paradox.md)
 - [Spatiotemporal Continuity](concepts/spatiotemporal-continuity.md)
