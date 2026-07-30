@@ -24,7 +24,7 @@ Dark energy is a hypothetical form of energy permeating all of space that is tho
 
 - Central to models of the late-time evolution and ultimate fate of the Universe.
 - Studied via observations of Type Ia supernovae, the CMB, and baryon acoustic oscillations to constrain its equation of state.
-- Motivates extensions to general relativity and candidate theories such as quintessence or modified gravity.
+- Motivates extensions to general relativity and candidate theories such as [quintessence](../concepts/quintessence.md) or modified gravity.
 
 ## Related Concepts
 
@@ -32,6 +32,7 @@ Dark energy is a hypothetical form of energy permeating all of space that is tho
 - [[concepts/cold-dark-matter|Cold Dark Matter]]
 - [[concepts/hubble-tension|Hubble Tension]]
 - [[concepts/big-bang|Big Bang]]
+- [[concepts/quintessence|Quintessence]]
 
 ## Related Entities
 

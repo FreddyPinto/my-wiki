@@ -27,6 +27,13 @@ In the context of the [Ship of Theseus / Identity Paradox](../concepts/ship-of-t
 
 [Perdurantism](../concepts/perdurantism.md) also appeals to temporal extension but treats objects as four-dimensional wholes composed of temporal parts, rather than as three-dimensional objects that persist through time by having the same identity at each moment.
 
+## Related Entities
+
+- [Theseus](../entities/theseus.md)
+- [Plutarch](../entities/plutarch.md)
+- [Thomas Hobbes](../entities/thomas-hobbes.md)
+- [Athens](../entities/athens.md)
+
 ## Sources
 
 - [Theseus's Paradox.md](../../raw/Theseus's%20Paradox.md)

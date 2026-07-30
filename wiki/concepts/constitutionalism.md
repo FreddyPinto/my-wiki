@@ -33,6 +33,13 @@ Rather than declaring one ship the winner, constitutionalism holds that both shi
 | Constitutionalism | Current matter + history | Both ships have valid claims |
 | [Perdurantism](../concepts/perdurantism.md) | Four-dimensional whole of all temporal parts | Both ships are overlapping temporal segments of one four-dimensional object |
 
+## Related Entities
+
+- [Theseus](../entities/theseus.md)
+- [Plutarch](../entities/plutarch.md)
+- [Thomas Hobbes](../entities/thomas-hobbes.md)
+- [Athens](../entities/athens.md)
+
 ## Sources
 
 - [Theseus's Paradox.md](../../raw/Theseus's%20Paradox.md)

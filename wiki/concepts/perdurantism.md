@@ -24,6 +24,13 @@ In the context of the [Ship of Theseus / Identity Paradox](../concepts/ship-of-t
 
 [Spatiotemporal continuity](../concepts/spatiotemporal-continuity.md) (a form of endurantism) treats objects as three-dimensional things that persist *wholly* through time — the same object is present at each moment. Perdurantism rejects this, saying no single temporal slice is the complete object.
 
+## Related Entities
+
+- [Theseus](../entities/theseus.md)
+- [Plutarch](../entities/plutarch.md)
+- [Thomas Hobbes](../entities/thomas-hobbes.md)
+- [Athens](../entities/athens.md)
+
 ## Sources
 
 - [Theseus's Paradox.md](../../raw/Theseus's%20Paradox.md)

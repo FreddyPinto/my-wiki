@@ -24,13 +24,16 @@ The Big Bang is the prevailing cosmological model for the origin and early evolu
 
 - Provides the temporal and physical starting conditions for all modern cosmological models and simulations.
 - Big Bang nucleosynthesis predictions are tested against observed elemental abundances, providing a consistency check on the standard model.
-- Motivates research into the very early Universe (inflation, baryogenesis) that lies before or just after the Big Bang.
+- Motivates research into the very early Universe ([cosmic inflation](../concepts/cosmic-inflation.md) and [baryogenesis](../concepts/baryogenesis.md)) that lies before or just after the Big Bang.
 
 ## Related Concepts
 
 - [[concepts/lambda-cdm-model|Lambda-CDM Model]]
 - [[concepts/cosmic-microwave-background|Cosmic Microwave Background]]
 - [[concepts/dark-energy|Dark Energy]]
+- [[concepts/big-bang-nucleosynthesis|Big Bang Nucleosynthesis]]
+- [[concepts/cosmic-inflation|Cosmic Inflation]]
+- [[concepts/baryogenesis|Baryogenesis]]
 
 ## Related Entities
 

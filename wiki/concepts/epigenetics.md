@@ -28,7 +28,7 @@ These modifications change which genes are expressed in a given cell or at a giv
 
 ## Relevance to Personal Identity
 
-Epigenetic divergence in monozygotic twins provides empirical grounding for the view that personal identity is not reducible to genetics. It supports the position explored in [Personal Identity](../concepts/personal-identity.md) that the environment and lived history — not just inherited biological substrate — are constitutive of who a person is.
+Epigenetic divergence in monozygotic twins provides empirical grounding for the view that personal identity is not reducible to genetics. It supports the position explored in [Personal Identity](../concepts/personal-identity.md) and [Psychological Continuity](../concepts/psychological-continuity.md) that the environment and lived history — not just inherited biological substrate — are constitutive of who a person is.
 
 ## Sources
 

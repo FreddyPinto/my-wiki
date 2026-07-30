@@ -7,6 +7,7 @@ related:
   - ../concepts/spatiotemporal-continuity.md
   - ../concepts/perdurantism.md
   - ../concepts/monozygotic-twins.md
+  - ../concepts/epigenetics.md
   - ../sources/theseus-paradox.md
   - ../sources/monozygotic.md
 ---
@@ -23,7 +24,7 @@ A person at time T2 is the same person as a person at time T1 if and only if the
 
 Psychological continuity is the personal-identity analogue of the [Ship of Theseus / Identity Paradox](../concepts/ship-of-theseus-identity-paradox.md). The human body replaces its cellular material continuously, so bodily matter cannot be the ground of personal identity. Psychological continuity offers an alternative: what persists is not the atoms but the mental pattern they instantiate.
 
-The case of [monozygotic twins](../concepts/monozygotic-twins.md) provides independent empirical support for this view: two individuals with essentially identical DNA develop distinct identities through differing memories, experiences, and environments — demonstrating that the mental pattern, not the genetic substrate, is what individuates persons.
+The case of [monozygotic twins](../concepts/monozygotic-twins.md) provides independent empirical support for this view: two individuals with essentially identical DNA develop distinct identities through differing memories, experiences, and environments — demonstrating that the mental pattern, not the genetic substrate, is what individuates persons. The mechanism behind this divergence is [epigenetics](../concepts/epigenetics.md): environmental factors write themselves onto gene expression, producing differences even where the genome is identical.
 
 It is one of the main competing answers explored in [Personal Identity](../concepts/personal-identity.md), alongside:
 
@@ -32,7 +33,7 @@ It is one of the main competing answers explored in [Personal Identity](../conce
 
 ## Key Advocates
 
-The most influential formulation comes from John Locke, who tied personal identity to memory and consciousness, and was developed further by Derek Parfit in *Reasons and Persons* (1984), who argued that psychological continuity — not strict identity — is what matters for survival.
+The most influential formulation comes from [John Locke](../entities/john-locke.md), who tied personal identity to memory and consciousness, and was developed further by [Derek Parfit](../entities/derek-parfit.md) in *Reasons and Persons* (1984), who argued that psychological continuity — not strict identity — is what matters for survival.
 
 ## Sources
 

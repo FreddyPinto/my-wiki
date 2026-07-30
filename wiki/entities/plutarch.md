@@ -6,7 +6,7 @@ aliases: [Plutarch of Chaeronea, Mestrius Plutarchus]
 
 # Plutarch
 
-Plutarch was a Greek biographer, essayist, and Middle Platonist philosopher (c. 46–119 AD). He is best known for his *Parallel Lives*, a series of biographies pairing famous Greeks and Romans. In the context of the wiki, he is the primary ancient source for the Ship of Theseus thought experiment.
+Plutarch was a Greek biographer, essayist, and Middle Platonist philosopher (c. 46–119 AD). He is best known for his [*Parallel Lives*](../concepts/parallel-lives.md), a series of biographies pairing famous Greeks and Romans. In the context of the wiki, he is the primary ancient source for the Ship of Theseus thought experiment.
 
 ## Role in the Paradox
 

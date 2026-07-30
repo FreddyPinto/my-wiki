@@ -19,7 +19,7 @@ Cold dark matter (CDM) is a hypothetical form of matter that does not interact w
 - Interacts only through gravity (and possibly the weak nuclear force), making it invisible to telescopes and detectable only via gravitational effects.
 - Constitutes roughly 27% of the total mass-energy budget of the Universe.
 - Acts as a gravitational scaffold: CDM halos collapse first, then pull in normal (baryonic) matter to form stars and galaxies.
-- Its fundamental particle identity remains unknown; candidates include weakly interacting massive particles (WIMPs), axions, and sterile neutrinos.
+- Its fundamental particle identity remains unknown; candidates include [weakly interacting massive particles (WIMPs)](../concepts/wimps.md), axions, and sterile neutrinos.
 - On small scales, CDM predictions sometimes diverge from observed dwarf galaxy densities and internal kinematics (the "small-scale structure problems").
 
 ## Applications
@@ -33,6 +33,7 @@ Cold dark matter (CDM) is a hypothetical form of matter that does not interact w
 - [[concepts/lambda-cdm-model|Lambda-CDM Model]]
 - [[concepts/dark-energy|Dark Energy]]
 - [[concepts/cosmic-microwave-background|Cosmic Microwave Background]]
+- [[concepts/wimps|WIMPs]]
 
 ## Related Entities
 
