@@ -89,3 +89,77 @@ Example:
 ```
 ## [2024-03-15] ingest | ai-scaling-laws-2024.pdf
 ```
+
+---
+
+## Multi-Source Merge Rules
+
+When a source being ingested touches an existing wiki page, apply the following rules in addition to the standard update procedure.
+
+### 1. `sources` Array — Append Only
+
+When appending information from a new source to an existing page, add the new source wiki-link to the `sources` frontmatter array. **Never overwrite or remove existing entries.**
+
+```yaml
+# Before
+sources: ["[[sources/theseus-paradox|Theseus's Paradox]]"]
+
+# After ingesting a second source
+sources:
+  - "[[sources/theseus-paradox|Theseus's Paradox]]"
+  - "[[sources/new-source|New Source Title]]"
+```
+
+### 2. `aliases` — Append Only
+
+When a new source introduces an alternative name for an entity or concept already in the wiki, append the new alias to the `aliases` frontmatter field. **Never remove existing aliases.**
+
+```yaml
+# Before
+aliases: ["Ship of Theseus"]
+
+# After finding a new alias in a second source
+aliases: ["Ship of Theseus", "Theseus's Ship"]
+```
+
+### 3. `reviewed: true` Pages — Append Only
+
+When a page has `reviewed: true` set, the Kiro_Agent SHALL:
+
+- **Only append** genuinely new information from the new source.
+- **Never alter, rewrite, or replace** any existing content on that page.
+- Add new facts, quotes, and sections after existing content — never in-place.
+
+This rule applies to all sections of the page, including frontmatter arrays, body text, and the Mentions in Source section.
+
+### 4. `NO_NEW_CONTENT` — Skip No-Op Updates
+
+When a source adds nothing new to an existing page (no new facts, no new aliases, no new quotes), the Kiro_Agent SHALL:
+
+1. Skip updating that page entirely — do not make a no-op write.
+2. Note `NO_NEW_CONTENT` for that page in the working summary presented to the user.
+
+Example working summary note:
+```
+- wiki/entities/theseus.md — NO_NEW_CONTENT (source adds no new facts, aliases, or quotes)
+```
+
+### 5. Contradictions — Dedicated Section + Inline Callout
+
+When a contradiction is detected during a multi-source ingest, the Kiro_Agent SHALL record it in **two places** on the affected page:
+
+**a) Inline callout** — immediately after the contradicted claim (existing behaviour):
+
+```markdown
+> **Contradiction:** Existing claim: "<existing claim text>". New source states: "<new claim text>". See [<source filename>](../../raw/<source filename>).
+```
+
+**b) Dedicated `## Contradictions` section** — at the bottom of the page, listing all contradictions found on that page with full source attribution for both sides:
+
+```markdown
+## Contradictions
+
+- **<brief label>:** [[sources/first-source|First Source]] states "<existing claim>"; [[sources/second-source|Second Source]] states "<contradicting claim>".
+```
+
+If the page already has a `## Contradictions` section, append new entries to it — do not replace the existing ones.

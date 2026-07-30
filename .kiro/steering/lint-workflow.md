@@ -28,14 +28,30 @@ Scan all wiki pages for claims that directly contradict claims in other wiki pag
 
 ### Check 2 — Stale Claims
 
-Compare wiki claims against source dates in `raw/`. A claim is stale when a newer source in `raw/` contradicts it. Use the `date` frontmatter field on source summary pages to determine recency. For each stale claim found, record:
+**Stale threshold: 90 days.**
+
+A wiki claim is considered potentially stale when a source in `raw/` with a `date` (or `created`) value more than 90 days newer than the source summary page that originally introduced the claim contradicts or supersedes it.
+
+To evaluate staleness, use the `date` frontmatter field on source summary pages to compare recency: find the `date` of the source summary page that introduced each claim, then check whether any raw source with a `date` more than 90 days later contradicts or supersedes that claim.
+
+For each stale claim found, record:
 - The wiki page containing the stale claim
-- The newer raw source that contradicts it
+- The source summary page that originally introduced the claim (and its `date`)
+- The newer raw source that contradicts or supersedes it (and its `date`)
 
 ### Check 3 — Orphan Pages
 
-Identify wiki pages that are not linked from `wiki/index.md`. A page is an orphan if its path does not appear under any section (`## Sources`, `## Entities`, or `## Concepts`) in the index. For each orphan found, record:
+An **orphan page** is a wiki page with no inbound links from any other wiki page. Absence from `wiki/index.md` alone does not make a page an orphan — that is a separate **index drift** issue (see below).
+
+To identify orphan pages:
+1. Enumerate all wiki pages under `wiki/sources/`, `wiki/entities/`, and `wiki/concepts/`.
+2. For each page, scan every other wiki page for wiki-links (`[[...]]`) and markdown links (`[...](...)`) that reference it.
+3. A page is an orphan if zero other wiki pages contain any link pointing to it.
+
+For each orphan found, record:
 - The page path
+
+**Index drift (co-occurring issue):** Also flag any wiki page that is absent from `wiki/index.md` as an index drift issue — record it separately from the orphan list. A page may be both an orphan and missing from the index, or only one of the two. Report each condition independently.
 
 ### Check 4 — Missing Cross-References
 
