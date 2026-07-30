@@ -6,7 +6,9 @@ related:
   - ../concepts/ship-of-theseus-identity-paradox.md
   - ../concepts/spatiotemporal-continuity.md
   - ../concepts/perdurantism.md
+  - ../concepts/monozygotic-twins.md
   - ../sources/theseus-paradox.md
+  - ../sources/monozygotic.md
 ---
 
 # Psychological Continuity
@@ -21,6 +23,8 @@ A person at time T2 is the same person as a person at time T1 if and only if the
 
 Psychological continuity is the personal-identity analogue of the [Ship of Theseus / Identity Paradox](../concepts/ship-of-theseus-identity-paradox.md). The human body replaces its cellular material continuously, so bodily matter cannot be the ground of personal identity. Psychological continuity offers an alternative: what persists is not the atoms but the mental pattern they instantiate.
 
+The case of [monozygotic twins](../concepts/monozygotic-twins.md) provides independent empirical support for this view: two individuals with essentially identical DNA develop distinct identities through differing memories, experiences, and environments — demonstrating that the mental pattern, not the genetic substrate, is what individuates persons.
+
 It is one of the main competing answers explored in [Personal Identity](../concepts/personal-identity.md), alongside:
 
 - **Bodily/spatiotemporal continuity** — identity grounded in an unbroken physical and causal chain (see [Spatiotemporal Continuity](../concepts/spatiotemporal-continuity.md))
@@ -33,3 +37,4 @@ The most influential formulation comes from John Locke, who tied personal identi
 ## Sources
 
 - [Theseus's Paradox.md](../../raw/Theseus's%20Paradox.md)
+- [Monozygotic.md](../../raw/Monozygotic.md)

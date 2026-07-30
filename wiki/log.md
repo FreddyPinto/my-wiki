@@ -13,3 +13,4 @@ Log entry format:
 ## [2026-07-24] ingest | Theseus's Paradox.md
 
 ## [2026-07-24] lint | 3 issues found
+## [2026-07-30] ingest | Monozygotic.md

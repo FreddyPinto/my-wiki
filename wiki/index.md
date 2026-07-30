@@ -6,6 +6,7 @@ during ingest and query operations. Pages are organized by type.
 ## Sources
 
 - [Theseus's Paradox](sources/theseus-paradox.md)
+- [Monozygotic](sources/monozygotic.md)
 
 ## Entities
 
@@ -17,6 +18,8 @@ during ingest and query operations. Pages are organized by type.
 ## Concepts
 
 - [Constitutionalism](concepts/constitutionalism.md)
+- [Epigenetics](concepts/epigenetics.md)
+- [Monozygotic Twins](concepts/monozygotic-twins.md)
 - [Perdurantism](concepts/perdurantism.md)
 - [Personal Identity](concepts/personal-identity.md)
 - [Psychological Continuity](concepts/psychological-continuity.md)

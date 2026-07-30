@@ -6,7 +6,10 @@ related:
   - ../concepts/spatiotemporal-continuity.md
   - ../concepts/perdurantism.md
   - ../concepts/psychological-continuity.md
+  - ../concepts/monozygotic-twins.md
+  - ../concepts/epigenetics.md
   - ../sources/theseus-paradox.md
+  - ../sources/monozygotic.md
 ---
 
 # Personal Identity
@@ -16,6 +19,8 @@ Personal identity is the philosophical question of what makes a person the same 
 ## The Core Problem
 
 A human being changes continuously: biologically, the cells of the body are replaced over time such that the atoms making up your body today are entirely different from those at birth. Psychologically, memories, beliefs, desires, and personality traits evolve across a lifetime. Yet we treat each person as a single, continuous individual. What grounds this continuity?
+
+The case of [monozygotic twins](../concepts/monozygotic-twins.md) sharpens the problem further: two individuals can begin with essentially identical genomes yet develop into distinct persons with different memories, personalities, and even fingerprints. This shows that identity cannot be fully grounded in genetics — [epigenetics](../concepts/epigenetics.md), environment, and lived experience are also constitutive of the self.
 
 ## Connection to the Ship of Theseus
 
@@ -32,3 +37,4 @@ The personal identity problem has practical implications in ethics (moral respon
 ## Sources
 
 - [Theseus's Paradox.md](../../raw/Theseus's%20Paradox.md)
+- [Monozygotic.md](../../raw/Monozygotic.md)
