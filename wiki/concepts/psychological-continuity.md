@@ -1,5 +1,6 @@
 ---
 type: concept
+tags: theory
 related:
   - ../concepts/personal-identity.md
   - ../concepts/ship-of-theseus-identity-paradox.md

@@ -1,5 +1,6 @@
 ---
 type: concept
+tags: theory
 related:
   - ../concepts/ship-of-theseus-identity-paradox.md
   - ../concepts/perdurantism.md

@@ -1,5 +1,6 @@
 ---
 type: concept
+tags: phenomenon
 related:
   - ../concepts/spatiotemporal-continuity.md
   - ../concepts/perdurantism.md

@@ -1,5 +1,6 @@
 ---
 type: concept
+tags: phenomenon
 related:
   - ../concepts/ship-of-theseus-identity-paradox.md
   - ../concepts/spatiotemporal-continuity.md

@@ -1,5 +1,6 @@
 ---
 type: entity
+tags: person
 aliases: [King Theseus, Theseus of Athens]
 ---
 

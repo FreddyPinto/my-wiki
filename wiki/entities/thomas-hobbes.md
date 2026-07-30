@@ -1,5 +1,6 @@
 ---
 type: entity
+tags: person
 aliases: [Hobbes, Thomas Hobbes of Malmesbury]
 ---
 

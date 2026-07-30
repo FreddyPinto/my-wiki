@@ -165,3 +165,108 @@ The workspace has three layers: immutable raw sources that the LLM reads but nev
 1. THE wiki-schema.md SHALL contain a dedicated section that labels `raw/` as immutable and explicitly lists the prohibited operations: write, modify, move, rename, and delete — for all files under `raw/` including all subdirectories.
 2. WHILE operating in the wiki workspace, THE Kiro_Agent SHALL read files in `raw/` but SHALL never write to, modify, move, rename, or delete any file under `raw/` or any of its subdirectories.
 3. IF the Kiro_Agent is instructed to perform any prohibited operation on a file under `raw/`, THEN THE Kiro_Agent SHALL refuse the instruction and respond with a message stating that `raw/` is an immutable layer and the requested operation is not permitted.
+
+---
+
+### Requirement 11: Extended Frontmatter Schema
+
+**User Story:** As a knowledge worker, I want all wiki pages to carry a richer set of metadata fields, so that pages are traceable, classifiable, and maintainable by both the agent and external tooling.
+
+#### Acceptance Criteria
+
+1. THE wiki-schema.md SHALL specify the following required frontmatter fields for **entity pages**: `type` (value: `entity`), `created` (ISO date), `sources` (array of wiki-links to source summary pages), and `tags` (entity subtype label). `aliases` and `reviewed` SHALL be defined as optional fields.
+2. THE wiki-schema.md SHALL specify the following required frontmatter fields for **concept pages**: `type` (value: `concept`), `created` (ISO date), `sources` (array of wiki-links to source summary pages), and `tags` (concept subtype label). `aliases` and `reviewed` SHALL be defined as optional fields.
+3. THE wiki-schema.md SHALL specify the following required frontmatter fields for **source summary pages**: `type` (value: `source`), `tags` (inherited from the source note), `sources` (array of wiki-links to pages created from this source), `created` (ISO date), and `updated` (ISO date).
+4. THE wiki-schema.md SHALL state that `created` and `updated` are set by the system and SHALL never be LLM-generated. The Kiro_Agent SHALL leave these fields as empty strings or placeholders and SHALL NOT populate them with dates it computes.
+5. THE wiki-schema.md SHALL state that on merge, `created` is preserved (the older value is kept) and `updated` is always set to the current date by the system.
+6. THE wiki-schema.md SHALL define the optional `reviewed` field: WHEN `reviewed: true` is set on a page, THE Kiro_Agent SHALL treat the page as human-verified and SHALL only append genuinely new information rather than modifying or replacing existing content.
+
+---
+
+### Requirement 12: Required Page Section Structure
+
+**User Story:** As a knowledge worker, I want every wiki page type to follow a consistent section structure, so that the agent produces predictable, well-organized pages that are easy to navigate and merge.
+
+#### Acceptance Criteria
+
+1. THE wiki-schema.md SHALL define the required section structure for **entity pages** as: (1) **Description** — 3–6 sentences with concrete facts and bidirectional links; (2) **Related Entities** — links to related entity pages; (3) **Related Concepts** — links to related concept pages; (4) **Mentions in Source** — verbatim quotes with source attribution.
+2. THE wiki-schema.md SHALL define the required section structure for **concept pages** as: (1) **Definition** — clear, concise definition; (2) **Key Characteristics** — bullet list of defining traits; (3) **Applications** — real-world usage scenarios; (4) **Related Concepts** — links to related concept pages; (5) **Related Entities** — links to related entity pages; (6) **Mentions in Source** — verbatim quotes with source attribution.
+3. THE wiki-schema.md SHALL define the required section structure for **source summary pages** as: (1) **Summary** — 2–4 sentence description of the source content; (2) **Key Points** — bullet list of main insights; (3) **Mentioned Pages** — list of entity and concept pages created from this source.
+4. WHEN the Kiro_Agent creates or updates a wiki page, it SHALL ensure all required sections are present and in the defined order. Sections MAY be empty if no content applies, but they SHALL NOT be omitted.
+
+---
+
+### Requirement 13: Mentions in Source — Verbatim Quotes
+
+**User Story:** As a knowledge worker, I want every entity and concept page to include verbatim quotes from the sources that mention them, so that claims are always traceable to their exact origin without relying on paraphrase.
+
+#### Acceptance Criteria
+
+1. THE wiki-schema.md SHALL define the **Mentions in Source** format as: `"Verbatim quote in original language (optional translation)" — [[source-name|display-name]]`.
+2. THE Kiro_Agent SHALL populate the **Mentions in Source** section with quotes copied verbatim from the source — paraphrase and summarization are prohibited in this section.
+3. THE wiki-schema.md SHALL specify that each quote MUST include a source wiki-link so that future page merges can trace the quote to its origin.
+4. WHEN multiple quotes from the same source are present on a page, they SHALL appear together in the same block, separated by newlines, rather than each in a separate section.
+5. THE wiki-schema.md SHALL specify that the language of verbatim quotes is always the original source language; an optional translation in parentheses MAY follow the quote.
+
+---
+
+### Requirement 14: Multi-Source Merge Rules
+
+**User Story:** As a knowledge worker, I want the agent to follow explicit merge rules when a second (or later) source touches an existing wiki page, so that no information is lost and the page history remains coherent.
+
+#### Acceptance Criteria
+
+1. THE ingest-workflow.md SHALL specify that WHEN a source being ingested adds information to an existing wiki page, the `sources` frontmatter array SHALL be appended with the new source wiki-link; the existing entries SHALL NOT be overwritten.
+2. THE ingest-workflow.md SHALL specify that WHEN a source being ingested introduces an alternative name for an entity or concept already in the wiki, the `aliases` frontmatter field SHALL be appended with the new alias; existing aliases SHALL NOT be removed.
+3. THE ingest-workflow.md SHALL specify that WHEN a page has `reviewed: true` set, THE Kiro_Agent SHALL only append genuinely new information from the new source and SHALL NOT alter, rewrite, or replace any existing content on that page.
+4. THE ingest-workflow.md SHALL specify that WHEN a source adds nothing new to an existing page (no new facts, aliases, or quotes), THE Kiro_Agent SHALL skip updating that page and MAY emit a `NO_NEW_CONTENT` note in its working summary rather than making a no-op write.
+5. WHEN a contradiction is detected during a multi-source ingest, THE Kiro_Agent SHALL record the contradiction in a dedicated `## Contradictions` section on the affected page in addition to any inline callout, preserving both the existing claim and the new contradicting claim with source attribution for each.
+
+---
+
+### Requirement 15: Wiki-Link Syntax
+
+**User Story:** As a knowledge worker, I want all internal cross-references to use wiki-link syntax, so that the wiki is compatible with tools that parse `[[...]]` links for graph traversal and link resolution.
+
+#### Acceptance Criteria
+
+1. THE wiki-schema.md SHALL define the internal linking convention as wiki-link syntax of the form `[[entities/page-name|Display Name]]` or `[[concepts/page-name|Display Name]]` for all cross-references between wiki pages.
+2. THE wiki-schema.md SHALL specify that wiki-links use the full path from the `wiki/` root without a leading slash (e.g. `[[entities/plutarch|Plutarch]]`, not `[[../entities/plutarch]]`).
+3. THE wiki-schema.md SHALL distinguish between wiki-links (for internal cross-references between wiki pages) and markdown links (for citations pointing to files under `raw/`); the two syntaxes SHALL NOT be used interchangeably.
+4. THE Kiro_Agent SHALL use wiki-link syntax in **Related Entities**, **Related Concepts**, and **Mentions in Source** sections, and in the `sources` and `related` frontmatter arrays; plain markdown relative links are reserved for citations only.
+
+---
+
+### Requirement 16: Naming Conventions
+
+**User Story:** As a knowledge worker, I want consistent naming conventions enforced across all wiki pages, so that filenames are predictable and entity names are never inadvertently translated or altered.
+
+#### Acceptance Criteria
+
+1. THE wiki-schema.md SHALL specify that all wiki page filenames use lowercase-with-hyphens (slug) format (e.g. `thomas-hobbes.md`, `spatiotemporal-continuity.md`).
+2. THE wiki-schema.md SHALL specify that entity and concept names used within page content and in wiki-links SHALL preserve the original language of the source document and SHALL never be translated by the Kiro_Agent.
+3. THE wiki-schema.md SHALL specify that wiki-link display names SHALL match the canonical page title as it appears in the page's `# Heading`.
+
+---
+
+### Requirement 17: Stale Claim Threshold
+
+**User Story:** As a knowledge worker, I want a concrete staleness threshold defined, so that the lint workflow applies a consistent, objective standard when identifying stale claims.
+
+#### Acceptance Criteria
+
+1. THE lint-workflow.md SHALL define the stale claim threshold as **90 days**: a wiki claim is considered potentially stale if a source in `raw/` with a `date` (or `created`) value more than 90 days newer than the source summary page that originally introduced the claim contradicts or supersedes it.
+2. THE lint-workflow.md SHALL instruct the Kiro_Agent to use the `date` frontmatter field on source summary pages to compare recency when evaluating staleness.
+3. THE wiki-schema.md SHALL document the 90-day stale threshold in the maintenance policies section so it is visible in every session.
+
+---
+
+### Requirement 18: Orphan Page Definition (Inbound Links)
+
+**User Story:** As a knowledge worker, I want orphan pages detected by inbound-link absence, not just index absence, so that pages buried off the index but still linked elsewhere are correctly identified.
+
+#### Acceptance Criteria
+
+1. THE lint-workflow.md SHALL define an orphan page as a wiki page with **no inbound links from any other wiki page** (not merely absent from `wiki/index.md`).
+2. THE lint-workflow.md SHALL instruct the Kiro_Agent to scan all pages under `wiki/` for wiki-links and markdown links that reference each page, and flag any page that is referenced by zero other wiki pages as an orphan.
+3. THE lint-workflow.md SHALL treat absence from `wiki/index.md` as a separate, co-occurring issue (index drift) rather than the definition of an orphan.

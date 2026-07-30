@@ -1,5 +1,6 @@
 ---
 type: entity
+tags: place
 aliases: [Athena, City of Athens, Ancient Athens]
 ---
 

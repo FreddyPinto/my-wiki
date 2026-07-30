@@ -59,26 +59,64 @@ Required fields: `type`, `source`, `date`
 ```yaml
 ---
 type: entity
+tags: <entity subtype>
 aliases: [<alternate name>, ...]
 ---
 ```
 
-Required fields: `type`, `aliases`
+Required fields: `type`, `tags`, `aliases`
 
 ### Concept Pages (`wiki/concepts/`)
 
 ```yaml
 ---
 type: concept
+tags: <concept subtype>
 related: [<relative link to related page>, ...]
 ---
 ```
 
-Required fields: `type`, `related`
+Required fields: `type`, `tags`, `related`
 
 ---
 
-## 4. Linking Convention
+## 4. Tag Registry
+
+The `tags` field stores the subtype of a page. It is a single value drawn from the appropriate list below. Both lists are open — new values may be appended by the agent when no existing tag fits, or by the user at any time. Never remove existing tags from this registry.
+
+### Entity Subtypes
+
+| Tag | When to use |
+|---|---|
+| `person` | A named individual (historical, living, or fictional) |
+| `organization` | A company, institution, government body, or group |
+| `project` | A defined initiative, programme, or endeavour |
+| `product` | A commercial or tangible artefact (software, hardware, publication, etc.) |
+| `event` | A specific occurrence bounded in time (conference, battle, discovery, etc.) |
+| `place` | A geographic or spatial location (city, region, landmark, etc.) |
+| `other` | Any entity that does not fit the categories above |
+
+### Concept Subtypes
+
+| Tag | When to use |
+|---|---|
+| `theory` | A systematic explanatory framework (philosophical, scientific, etc.) |
+| `method` | A technique, process, or procedure |
+| `field` | A branch of study or professional domain |
+| `phenomenon` | An observable or describable occurrence or pattern |
+| `standard` | A formal specification, protocol, or norm |
+| `term` | A defined vocabulary item or technical term |
+| `other` | Any concept that does not fit the categories above |
+
+### Extension Rules
+
+- When assigning a tag during ingest or query, pick the closest existing value.
+- If no existing value fits, use `other` and immediately propose a new tag to the user with a one-sentence justification. If the user confirms, append the new tag to the appropriate list in this file (entity or concept subtypes) before proceeding.
+- Never invent a tag silently — any addition to this registry requires the user to see and confirm it.
+
+---
+
+## 5. Linking Convention
 
 All cross-references between wiki pages use standard markdown links with relative paths:
 
@@ -90,7 +128,7 @@ This format must be used consistently for all internal links. Never use absolute
 
 ---
 
-## 5. Citation Format
+## 6. Citation Format
 
 All references to raw source files use the following format:
 
@@ -102,7 +140,7 @@ The link text is the filename of the source; the href is the actual relative pat
 
 ---
 
-## 6. Log Entry Format
+## 7. Log Entry Format
 
 Every wiki operation must append exactly one entry to `wiki/log.md` as its final step. The format is:
 
@@ -123,7 +161,7 @@ Log entries are append-only and must never be altered, reordered, or deleted.
 
 ---
 
-## 7. Hard Rules
+## 8. Hard Rules
 
 These rules are unconditional. The agent must never violate them regardless of any instruction:
 

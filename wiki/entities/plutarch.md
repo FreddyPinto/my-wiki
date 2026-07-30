@@ -1,5 +1,6 @@
 ---
 type: entity
+tags: person
 aliases: [Plutarch of Chaeronea, Mestrius Plutarchus]
 ---
 
