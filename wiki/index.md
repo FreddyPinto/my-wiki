@@ -7,6 +7,7 @@ during ingest and query operations. Pages are organized by type.
 
 - [Theseus's Paradox](sources/theseus-paradox.md)
 - [Monozygotic](sources/monozygotic.md)
+- [Lambda-CDM](sources/lambda-cdm.md)
 
 ## Entities
 
@@ -17,8 +18,14 @@ during ingest and query operations. Pages are organized by type.
 
 ## Concepts
 
+- [Big Bang](concepts/big-bang.md)
+- [Cold Dark Matter](concepts/cold-dark-matter.md)
 - [Constitutionalism](concepts/constitutionalism.md)
+- [Cosmic Microwave Background](concepts/cosmic-microwave-background.md)
+- [Dark Energy](concepts/dark-energy.md)
 - [Epigenetics](concepts/epigenetics.md)
+- [Hubble Tension](concepts/hubble-tension.md)
+- [Lambda-CDM Model](concepts/lambda-cdm-model.md)
 - [Monozygotic Twins](concepts/monozygotic-twins.md)
 - [Perdurantism](concepts/perdurantism.md)
 - [Personal Identity](concepts/personal-identity.md)
